@@ -2,7 +2,7 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Edit|Write|MultiEdit|NotebookEdit|mcp__plugin_code-collie_code-collie__record_context",
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|mcp__plugin_code-collie_code-collie__get_context|mcp__plugin_code-collie_code-collie__record_context",
         "hooks": [
           {
             "type": "mcp_tool",
