@@ -7,15 +7,16 @@ records it when you tell it something new.
 
 ## Install
 
-In Claude Code (2.1.275 or later):
+In a terminal, with an up-to-date Claude Code (checked on 2.1.280; if a
+command is not recognised, run `claude update` first):
 
 ```
-/plugin install code-collie --marketplace CCCeddy/code-collie-plugins
+claude plugin marketplace add CCCeddy/code-collie-plugins && claude plugin install code-collie@code-collie && claude mcp login plugin:code-collie:code-collie
 ```
 
-Claude Code then says Code Collie needs you to sign in. Run `/mcp`, choose
-Code Collie, and sign in or sign up in the browser. That is the whole install:
-no key, and nothing to add to any repository.
+The last command opens your browser: sign in or sign up, and allow. Then start
+a new Claude Code session, or run `/reload-plugins` in one that is open. That
+is the whole install: no key, and nothing to add to any repository.
 
 If you connected Code Collie by hand before (`claude mcp add … code-collie`),
 remove that first with `claude mcp remove code-collie`, and delete
