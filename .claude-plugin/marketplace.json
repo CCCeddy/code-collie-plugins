@@ -1,0 +1,15 @@
+{
+  "name": "code-collie",
+  "description": "Code Collie's Claude Code plugins.",
+  "owner": {
+    "name": "Code Collie",
+    "url": "https://codecollie.com"
+  },
+  "plugins": [
+    {
+      "name": "code-collie",
+      "source": "./plugins/code-collie",
+      "description": "Project context the repository cannot give your assistant: decisions and why, constraints from outside the code, and what is in progress."
+    }
+  ]
+}

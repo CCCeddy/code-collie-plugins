@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "code-collie": {
+      "type": "http",
+      "url": "https://app.codecollie.com/api/mcp"
+    }
+  }
+}

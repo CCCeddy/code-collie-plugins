@@ -1,0 +1,38 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|mcp__plugin_code-collie_code-collie__record_context",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:code-collie:code-collie",
+            "tool": "session_signal",
+            "input": {
+              "session_id": "${session_id}",
+              "tool": "${tool_name}"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "mcp__plugin_code-collie_code-collie__record_context",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:code-collie:code-collie",
+            "tool": "session_signal",
+            "input": {
+              "session_id": "${session_id}",
+              "tool": "${tool_name}"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

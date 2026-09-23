@@ -1,0 +1,9 @@
+{
+  "name": "code-collie",
+  "description": "Project context the repository cannot give your assistant: decisions and why, constraints from outside the code, and what is in progress.",
+  "author": {
+    "name": "Code Collie",
+    "url": "https://codecollie.com"
+  },
+  "homepage": "https://codecollie.com"
+}
