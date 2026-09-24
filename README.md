@@ -11,7 +11,9 @@ In a terminal, with an up-to-date Claude Code (checked on 2.1.280; if a
 command is not recognised, run `claude update` first):
 
 ```
-claude plugin marketplace add CCCeddy/code-collie-plugins && claude plugin install code-collie@code-collie && claude mcp login plugin:code-collie:code-collie
+claude plugin marketplace add CCCeddy/code-collie-plugins
+claude plugin install code-collie@code-collie
+claude mcp login plugin:code-collie:code-collie
 ```
 
 The last command opens your browser: sign in or sign up, and allow. Then start
