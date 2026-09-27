@@ -27,10 +27,12 @@ plugin's server when you already have one at the same address.
 
 ## What it sends
 
-The plugin tells Code Collie which session made an edit or recorded
-something, so it can count how many sessions change code and how many of those
-write anything down. That is the session's id and the tool's name. Never file
-contents, commands or messages.
+The plugin tells Code Collie when a session edits code, reads or records
+context, or gets a message from you, so it can count how many sessions change
+code and how many of those write anything down, and add a short note to your
+messages asking the agent to record decisions. That is the session's id, the
+tool's name or the event, and which build of the plugin sent it. Never file
+contents, commands or the text of your messages.
 
 This repository is published automatically; changes made here are
 overwritten.

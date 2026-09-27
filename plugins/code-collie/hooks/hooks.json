@@ -1,5 +1,23 @@
 {
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:code-collie:code-collie",
+            "tool": "session_signal",
+            "input": {
+              "session_id": "${session_id}",
+              "plugin": "aafe5bb58aea",
+              "event": "PreToolUse"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "Edit|Write|MultiEdit|NotebookEdit|mcp__plugin_code-collie_code-collie__get_context|mcp__plugin_code-collie_code-collie__record_context",
@@ -10,6 +28,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
+              "plugin": "aafe5bb58aea",
               "tool": "${tool_name}"
             },
             "timeout": 5
@@ -19,7 +38,7 @@
     ],
     "PostToolUseFailure": [
       {
-        "matcher": "mcp__plugin_code-collie_code-collie__record_context",
+        "matcher": "mcp__plugin_code-collie_code-collie__get_context|mcp__plugin_code-collie_code-collie__record_context",
         "hooks": [
           {
             "type": "mcp_tool",
@@ -27,7 +46,25 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
+              "plugin": "aafe5bb58aea",
               "tool": "${tool_name}"
+            },
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:code-collie:code-collie",
+            "tool": "session_signal",
+            "input": {
+              "session_id": "${session_id}",
+              "plugin": "aafe5bb58aea",
+              "event": "UserPromptSubmit"
             },
             "timeout": 5
           }

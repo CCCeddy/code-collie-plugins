@@ -1,6 +1,6 @@
 ---
 name: code-collie
-description: Fetch and record the project context that is not in the repository — decisions and their reasoning, constraints from outside the code, intent, cross-repository contracts, and what is in progress. Use before the first edit of a session, before starting on an unfamiliar part of the system, before interrupting the person for a decision, when reviewing someone else's work, and — above all — the moment the person tells you something the repository does not contain.
+description: Fetch and record the project context the code doesn't show — decisions and their reasoning, constraints from outside the code, intent, cross-repository contracts, and what is in progress. Use before the first edit of a session, before starting on an unfamiliar part of the system, before interrupting the person for a decision, when reviewing someone else's work, and — above all — the moment the person tells you something the repository does not contain.
 ---
 
 # Code Collie
@@ -15,6 +15,8 @@ Call `get_context`:
 - **before your first edit in a session**;
 - when you move to a part of the system you have not touched this session;
 - before you interrupt the person to ask which way to go;
+- when the person asks something the code cannot answer, such as why
+  something is the way it is;
 - before reviewing someone else's work, then `review_delta` for that branch
   or pull request.
 
