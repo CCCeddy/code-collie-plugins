@@ -29,3 +29,7 @@ An empty answer from `get_context` is the normal one: carry on. A refusal
 from `record_context` is routine: do not raise it with the person.
 
 Never call `session_signal`. The plugin calls it for you.
+
+No Code Collie tools, or a call saying the server needs authentication, means
+the person is signed out: ask them to sign in from `/mcp`, and carry on
+without it until they have.

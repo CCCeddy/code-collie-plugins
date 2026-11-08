@@ -10,7 +10,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "aafe5bb58aea",
+              "plugin": "7500c3b362cc",
               "event": "PreToolUse"
             },
             "timeout": 5
@@ -28,7 +28,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "aafe5bb58aea",
+              "plugin": "7500c3b362cc",
               "tool": "${tool_name}"
             },
             "timeout": 5
@@ -46,7 +46,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "aafe5bb58aea",
+              "plugin": "7500c3b362cc",
               "tool": "${tool_name}"
             },
             "timeout": 5
@@ -63,7 +63,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "aafe5bb58aea",
+              "plugin": "7500c3b362cc",
               "event": "UserPromptSubmit"
             },
             "timeout": 5
