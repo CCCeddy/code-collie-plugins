@@ -26,6 +26,8 @@ worktree=$(printf '%s' "$root" | git hash-object --stdin) || exit 0
 
 tmp=$TMPDIR
 [ -n "$tmp" ] || tmp=/tmp
+repos="$tmp/code-collie-repos-$session"
+grep -qxF -- "$root" "$repos" 2>/dev/null || printf '%s\n' "$root" >>"$repos"
 sent="$tmp/code-collie-work-$session-$worktree"
 if [ "$(head -1 "$sent" 2>/dev/null)" != "branch:$branch" ] ||
   [ -n "$(find "$sent" -mmin +10 2>/dev/null)" ]; then

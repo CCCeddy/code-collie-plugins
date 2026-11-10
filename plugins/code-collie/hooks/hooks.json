@@ -10,7 +10,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "event": "PreToolUse"
             },
             "timeout": 5
@@ -28,7 +28,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "tool": "${tool_name}"
             },
             "timeout": 5
@@ -44,7 +44,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "tool": "${tool_name}",
               "task": "${tool_input.task}"
             },
@@ -62,6 +62,17 @@
             "timeout": 10
           }
         ]
+      },
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|Bash|Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/report-pull-requests.sh\"",
+            "async": true,
+            "timeout": 15
+          }
+        ]
       }
     ],
     "PostToolUseFailure": [
@@ -74,7 +85,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "tool": "${tool_name}"
             },
             "timeout": 5
@@ -90,7 +101,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "tool": "${tool_name}",
               "task": "${tool_input.task}"
             },
@@ -108,7 +119,7 @@
             "tool": "session_signal",
             "input": {
               "session_id": "${session_id}",
-              "plugin": "954b8da673a1",
+              "plugin": "f618db380a09",
               "event": "UserPromptSubmit"
             },
             "timeout": 5
