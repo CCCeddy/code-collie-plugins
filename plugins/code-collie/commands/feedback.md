@@ -8,7 +8,7 @@ Pass this on to the Code Collie team: $ARGUMENTS
 
 Call `send_feedback` in the shape it asks for: what they expected and what they got, in your own words rather than theirs, with no code and no names of people, customers or projects. If they gave nothing above, send what did not fit Code Collie in this session; if nothing did, ask them what to pass on.
 
-Include `"plugin": "f618db380a09"` in the arguments. It tells the team which install of the plugin sent it, which they cannot learn any other way.
+Include `"plugin": "55dba45d924a"` in the arguments. It tells the team which install of the plugin sent it, which they cannot learn any other way.
 
 If it is only that one entry is wrong, do not send it: help them correct the entry instead. If there is no `send_feedback` tool, tell them Code Collie is not connected here or their team has switched feedback off.
 
